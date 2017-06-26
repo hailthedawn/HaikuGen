@@ -8,8 +8,7 @@ from textstat.textstat import textstat
 #Make a model from this string
 #generate first sentence from this model
 
-#
-#"C:\CS Stuff\HaikuGen\\tests\Wordsworth.txt"
+
 class train():
     dir=os.path.dirname(os.path.dirname(os.path.abspath(inspect.stack()[0][1])))
 
@@ -20,13 +19,13 @@ class train():
 
 
     def main(self):
-        f1 = open(self.file1)
-        text = f1.read()
 
-        f2 = open(self.file2)
-        text += f2.read()
+        textModel = train.trainOnFiles(self)
+        haiku=train.genHaiku(self,textModel)
 
-        textModel = markovify.NewlineText(text)
+        print(haiku)
+
+    def genHaiku(self,textModel):
         haiku=""
         for i in range(0,3):
             while True:
@@ -35,7 +34,16 @@ class train():
                     haiku+=sent+"\n"
                     break
 
-        print(haiku)
+
+
+    def trainOnFiles(self):
+        f1 = open(self.file1)
+        text = f1.read()
+
+        f2 = open(self.file2)
+        text += f2.read()
+        return markovify.NewlineText(text)
+
 
 if __name__=="__main__":
     train.main(train())
