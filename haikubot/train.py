@@ -33,6 +33,7 @@ class train():
                 if(not sent==None) and (textstat.syllable_count(sent)<self.line_limits[i]):
                     haiku+=sent+"\n"
                     break
+        return haiku
 
 
 
