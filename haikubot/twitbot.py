@@ -1,5 +1,5 @@
 import tweepy
-from time import sleep
+import time
 from haikubot import credentials, train
 
 
@@ -11,6 +11,7 @@ api = tweepy.API(auth)
 trainOb=train.train()
 textModel=trainOb.trainOnFiles()
 
-
-haiku=trainOb.genHaiku(textModel)
-api.update_status(haiku)
+while True:
+    haiku=trainOb.genHaiku(textModel)
+    api.update_status(haiku)
+    time.sleep(24*60*60)
