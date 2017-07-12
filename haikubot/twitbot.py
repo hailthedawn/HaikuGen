@@ -1,10 +1,11 @@
 import tweepy
 import time
-from haikubot import credentials, train
+from haikubot import train
+import os
 
 
-auth = tweepy.OAuthHandler(credentials.consumer_key, credentials.consumer_secret)
-auth.set_access_token(credentials.access_token, credentials.access_token_secret)
+auth = tweepy.OAuthHandler(os.environ['consumer_key'], os.environ['consumer_secret'])
+auth.set_access_token(os.environ['access_token'], os.environ['access_token_secret'])
 api = tweepy.API(auth)
 
 
