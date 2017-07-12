@@ -1,0 +1,1 @@
+web: gunicorn worker: python twitbot.py --log-file -
