@@ -1,0 +1,12 @@
+/haikubot/credentials.py
+/haikubot/scratch.txt
+/buildModel.py
+/markovify
+/markovify-master
+/test-markovify
+.env
+venv
+*.pyc
+staticfiles
+__pycache__/
+*$py.class
