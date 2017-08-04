@@ -1,1 +1,1 @@
-worker: python twitbot.py --log-file -
+worker: python haikubot/twitbot.py --log-file -
