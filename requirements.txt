@@ -25,6 +25,6 @@ textblob==0.12.0
 textstat==0.3.1
 tweepy==3.5.0
 Unidecode==0.4.20
-urllib3==1.21.1
+urllib3==1.26.5
 virtualenv==15.1.0
 yarg==0.1.9
