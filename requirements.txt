@@ -11,7 +11,7 @@ jmespath==0.9.3
 markovify==0.6.0
 matplotlib==1.5.3
 nltk==3.2.4
-numpy==1.11.2
+numpy==1.22.0
 oauthlib==2.0.2
 pipreqs==0.4.9
 pyparsing==2.1.10
